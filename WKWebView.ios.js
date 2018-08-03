@@ -251,6 +251,7 @@ class WKWebView extends React.Component {
     */
     customUserAgent: PropTypes.string,
     userAgent: PropTypes.string,
+      appendUserAgent: PropTypes.string,
     /**
      * A Boolean value that determines whether paging is enabled for the scroll view.
     */
@@ -313,6 +314,7 @@ class WKWebView extends React.Component {
       source.sendCookies = this.props.sendCookies;
       source.customUserAgent =
         this.props.customUserAgent || this.props.userAgent;
+      source.appendUserAgent = this.props.appendUserAgent;
     }
 
     if (this.props.html) {
